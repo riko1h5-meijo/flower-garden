@@ -1,0 +1,36 @@
+/* 背景の2枚（裏画像 back・表画像 front）を、同じ場所に重ねて置く */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 表画像。上からでも裏にいる foo にマウスが届くようにする */
+#front {
+  pointer-events: none;
+}
+
+/* 左上のメッセージ */
+#message {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  color: #c2255c;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* マウスを乗せると、ランダムな位置へ移動する（位置は script.js で指定） */
+
+.foo {
+  position: absolute;
+  width: 27px;
+  transition: left 0.5s ease, top 0.5s ease;   /* foo は素早く */
+}
+
+.butterfly {
+  position: absolute;
+  width: 80px;
+  transition: left 1.5s ease, top 1.5s ease;   /* 蝶はゆっくり */
+}
